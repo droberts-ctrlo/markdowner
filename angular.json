@@ -1,0 +1,41 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "markdowner": {
+      "projectType": "library",
+      "root": "projects/markdowner",
+      "sourceRoot": "projects/markdowner/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/markdowner/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/markdowner/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/markdowner/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/markdowner/src/test.ts",
+            "tsConfig": "projects/markdowner/tsconfig.spec.json",
+            "karmaConfig": "projects/markdowner/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "0d802a20-4d66-4cdb-b440-a5ced733487b"
+  }
+}
