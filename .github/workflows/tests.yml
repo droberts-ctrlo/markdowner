@@ -1,9 +1,5 @@
 name: 'GADS Tests'
 on: [ 'push', 'pull_request' ]
-branches:
-  - 'main'
-  - 'master'
-  - 'develop'
 
 jobs:
   unit_tests:
