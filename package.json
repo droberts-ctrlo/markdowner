@@ -1,6 +1,6 @@
 {
   "name": "@davetheitguy/markdowner",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple markdown parser",
   "license": "MIT",
   "author": {
@@ -9,7 +9,8 @@
   },
   "packageManager": "yarn@1.22.21",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "dependencies": {
     "marked": "^4.1.0"
